@@ -1,0 +1,106 @@
+:root {
+    --radius: 0.25rem;
+    --col-bg: #ef5350;
+    --col-dark: #101010;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*::-moz-selection { /* Firefox */
+    color: var(--col-dark);
+    background: #ffffff;
+}
+
+*::selection {
+    color: var(--col-dark);
+    background: #ffffff;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    min-height: 100vh;
+    background-color:var(--col-bg);
+}
+
+header {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3.3rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+#app {
+    margin-inline: auto;
+    width: min(90%, 40rem);
+}
+
+.window .header {
+    background-color: #fafafa;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    padding-left: 0.3rem;
+}
+
+    .window .header i {
+        font-size: 0.5rem;
+        color: #a7a6a8;
+        margin: 0.7rem 0 0.6rem 0.3rem;
+    }
+
+.window .body {
+    background-color: var(--col-dark);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    min-height: 20rem;
+    box-shadow: 0 20px 50px 0px rgba(0, 0, 0, 0.4);
+    padding: 1.25rem;
+}
+
+    .window .body p {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+
+        .window .body p:last-child {
+            margin-bottom: 0rem;
+        }
+
+    .window .body a {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    .window .body a:hover {
+        text-decoration: none;
+    }
+
+    .window .body i#github-link {
+        margin-right: 0.5rem;
+    }
+
+.blink {
+    animation: blinking 1500ms infinite;
+}
+
+@keyframes blinking {
+      0% { color: #ffffff }
+     50% { color: var(--col-dark) }
+}
